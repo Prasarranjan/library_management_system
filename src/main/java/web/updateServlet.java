@@ -60,7 +60,6 @@ public class updateServlet extends HttpServlet {
             out.print("</body>");
             out.print("</html>");
         } else {
-            // Failed update
             resp.setContentType("text/html");
             PrintWriter out = resp.getWriter();
             out.print("<!DOCTYPE html>");

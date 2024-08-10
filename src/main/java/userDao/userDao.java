@@ -117,7 +117,7 @@ public class userDao {
                 while (rs.next()) {
 
                     user.setId(rs.getInt("id"));
-                    user.setName(rs.getString("name"));  // Here is where setName() is called
+                    user.setName(rs.getString("name"));
                     user.setAuthor(rs.getString("author"));
                     user.setPrice(rs.getInt("price"));
                     user.setPublisher(rs.getString("publisher"));

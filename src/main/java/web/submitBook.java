@@ -32,7 +32,6 @@ public class submitBook extends HttpServlet {
         u.setIsbn(isbn);
         int result = userDao.saveDetails(u);
         if (result == 1) {
-            // Successful addition
             response.setContentType("text/html");
             PrintWriter out = response.getWriter();
             out.print("<!DOCTYPE html>");

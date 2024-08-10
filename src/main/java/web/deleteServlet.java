@@ -17,7 +17,6 @@ public class deleteServlet extends HttpServlet {
 
         int result=userDao.deleteUser(id);
         if (result != 0) {
-            // Successful deletion
             resp.setContentType("text/html");
             PrintWriter out = resp.getWriter();
             out.print("<!DOCTYPE html>");
@@ -28,7 +27,7 @@ public class deleteServlet extends HttpServlet {
             out.print("<style>");
             out.print("body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; }");
             out.print(".container { width: 50%; margin: auto; padding: 20px; background-color: #fff; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); text-align: center; }");
-            out.print("h2 { color: #4CAF50; }");  // Green color for success
+            out.print("h2 { color: #4CAF50; }");
             out.print(".btn-back { margin-top: 20px; background-color: #007bff; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; text-decoration: none; display: inline-block; }");
             out.print(".btn-back:hover { background-color: #0056b3; }");
             out.print("</style>");
@@ -44,7 +43,6 @@ public class deleteServlet extends HttpServlet {
             out.print("</body>");
             out.print("</html>");
         } else {
-            // Failed deletion
             resp.setContentType("text/html");
             PrintWriter out = resp.getWriter();
             out.print("<!DOCTYPE html>");
@@ -55,7 +53,7 @@ public class deleteServlet extends HttpServlet {
             out.print("<style>");
             out.print("body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; }");
             out.print(".container { width: 50%; margin: auto; padding: 20px; background-color: #fff; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); text-align: center; }");
-            out.print("h2 { color: #f44336; }");  // Red color for error
+            out.print("h2 { color: #f44336; }");
             out.print(".btn-back { margin-top: 20px; background-color: #007bff; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; text-decoration: none; display: inline-block; }");
             out.print(".btn-back:hover { background-color: #0056b3; }");
             out.print("</style>");
